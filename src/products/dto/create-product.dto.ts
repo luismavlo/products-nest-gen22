@@ -19,4 +19,9 @@ export class CreateProductDto {
   @IsString()
   @MinLength(7)
   description: string;
+
+  @IsNumber()
+  @IsPositive()
+  @IsOptional()
+  stock?: number;
 }
